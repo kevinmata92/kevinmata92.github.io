@@ -1,0 +1,60 @@
+---
+# Front matter required so Jekyll processes this file.
+---
+
+@import "minima";
+
+/* ---------------------------------------------------------------------------
+   Minimal readability tweaks on top of Minima.
+   Keep this file small; prefer the theme defaults.
+   --------------------------------------------------------------------------- */
+
+/* Long-form article readability. */
+.post-content {
+  p, li {
+    line-height: 1.7;
+  }
+
+  h2 {
+    margin-top: 1.8em;
+  }
+
+  h3 {
+    margin-top: 1.4em;
+  }
+}
+
+/* Code blocks: no page-level horizontal scroll, readable size. */
+pre, code {
+  font-size: 0.85em;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+/* Tables: used heavily for CVE metadata and disclosure timelines. */
+table {
+  width: 100%;
+  font-size: 0.95em;
+
+  th, td {
+    padding: 8px 12px;
+  }
+}
+
+/*
+ * Let wide tables scroll instead of overflowing on narrow screens.
+ * Scoped to a media query: `display: block` collapses a table to
+ * shrink-to-fit width, so it must not apply on desktop.
+ */
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

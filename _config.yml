@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# Site
+# ---------------------------------------------------------------------------
+title: Kevin Mata
+tagline: "Security Engineering · Cloud Security · AI Security"
+description: >-
+  Security research, vulnerability write-ups, and security engineering notes
+  by Kevin Mata.
+
+url: "https://kevinmata92.github.io"
+baseurl: ""
+
+author:
+  name: Kevin Mata
+
+github_username: kevinmata92
+# email: TODO  # Uncomment to show a contact address in the Minima footer.
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+theme: minima
+markdown: kramdown
+highlighter: rouge
+
+# All posts live under /research/<slug>/ so the research index and the
+# write-ups share a single URL namespace.
+permalink: /research/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# ---------------------------------------------------------------------------
+# Navigation: Research | Projects | About
+# Minima builds the header nav from this list, in this order.
+# ---------------------------------------------------------------------------
+header_pages:
+  - research.md
+  - projects.md
+  - about.md
+
+minima:
+  date_format: "%b %-d, %Y"
+
+# ---------------------------------------------------------------------------
+# Never published
+# ---------------------------------------------------------------------------
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .bundle/
